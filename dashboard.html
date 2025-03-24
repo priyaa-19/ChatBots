@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; margin: 20px; }
+        .dashboard-container { width: 50%; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px gray; }
+        .input-box, .select-box { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid gray; border-radius: 5px; }
+        .btn { padding: 10px 15px; cursor: pointer; background: green; color: white; border: none; border-radius: 5px; }
+        .logout-btn { background: red; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h2>Admin Dashboard - Add Troubleshooting Solution</h2>
+
+    <div class="dashboard-container">
+        <form method="POST" action="/dashboard">
+            <textarea name="solution" placeholder="Enter troubleshooting solution here..." class="input-box" required></textarea><br>
+            <select name="category" class="select-box">
+                <option value="General">General</option>
+                <option value="Networking">Networking</option>
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+            </select><br>
+            <button type="submit" class="btn">Submit Solution</button>
+        </form>
+
+        <a href="/logout"><button class="btn logout-btn">Logout</button></a>
+    </div>
+
+</body>
+</html>
